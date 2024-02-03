@@ -8,5 +8,5 @@ function refreshUI() {
   rootElement.append(todoListElement);
 }
 
-refreshUI()
-subscribe(refreshUI)
+refreshUI();
+subscribe(refreshUI);

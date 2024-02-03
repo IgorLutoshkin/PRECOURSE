@@ -7,5 +7,8 @@ export function Tasks(task) {
 
   const deleteElement = ButtonDelete(task.id); // в переменную закинули нашу функцию которая создает кнопку со слушателем
   container.append(deleteElement); //добавляем функцию - кнопку в "лишку"
-  return container;
+
+
+return container;
+
 }
