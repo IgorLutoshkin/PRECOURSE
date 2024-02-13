@@ -19,6 +19,7 @@ export const data = {
       titleTask: "Learn React",
     },
   ],
+  dialogWindow: false,
 };
 
 let notifySubscribe = null; // эту переменную будем переопределять колбэком subscriber
@@ -31,6 +32,7 @@ export function subscribe(subscriber) {
   // и передавать в нее в качестве параметра refreshUI
 }
 
+//CRUD
 /* удаление */
 export function deleteElement(taskId) {
   let tasks = data.tasks;
@@ -60,5 +62,29 @@ export function addElement(textInput) {
     textInput.value = "";
   }
 
+  notifySubscribe();
+}
+
+/* редактирование */
+// создает новый объект массива с отредактированной задачей и обновляет UI
+export function editTask(oldText, newText) {
+  let tasks = data.tasks;
+  data.tasks = tasks.map((el) =>
+    el.titleTask === oldText ? { ...el, titleTask: newText } : el
+  );
+
+  notifySubscribe();
+}
+
+
+/*  */
+// открытие диалогового окна по нажатию кнопки +добавить
+export function closeDialog() {
+  data.dialogWindow = false;
+  notifySubscribe();
+}
+//закрытие диалогового окна по нажатию кнопки "закрыть"
+export function openDialog() {
+  data.dialogWindow = true;
   notifySubscribe();
 }

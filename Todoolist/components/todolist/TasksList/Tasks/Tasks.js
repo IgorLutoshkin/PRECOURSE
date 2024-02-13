@@ -1,14 +1,45 @@
-import { ButtonDelete } from "../../ButtonsPanel/ButtonDelete/ButtonDelete.js";
+import { deleteElement } from "../../../../data/data.js";
+import { Button } from "../../Button/Button.js";
+import { TaskEdit } from "../TaskEdit/TaskEdit.js";
 
 export function Tasks(task) {
   // add item
   const container = document.createElement("li");
-  container.append(task.titleTask);
 
-  const deleteElement = ButtonDelete(task.id); // в переменную закинули нашу функцию которая создает кнопку со слушателем
-  container.append(deleteElement); //добавляем функцию - кнопку в "лишку"
+  //
+  const textTask = document.createElement("span");
+  textTask.append(task.titleTask);
+  container.append(textTask);
 
+  //
+  container.append(Button("x", () => deleteElement(task.id)));
 
-return container;
+  //создание input ,с текстом задачи, вместо span для редактирования
+  container.addEventListener("click", () =>
+    TaskEdit(task.titleTask, container)
+  );
 
+  /*  //start
+
+  const editInput = document.createElement("input");
+  editInput.setAttribute("type", "text");
+  container.addEventListener("click", () => {
+    container.innerText = "";
+    editInput.value = task.titleTask;
+    container.append(editInput);
+    editInput.focus();
+
+    //
+    //
+    container.append(
+      Button("edit", () => {
+        let valueInput = editInput.value;
+        // console.log(valueInput);
+
+        editTask(task.titleTask, valueInput);
+      })
+    );
+  }); */
+
+  return container;
 }
