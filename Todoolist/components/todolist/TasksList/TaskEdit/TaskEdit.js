@@ -2,7 +2,6 @@ import { editTask } from "../../../../data/data.js";
 import { Button } from "../../Button/Button.js";
 
 export function TaskEdit(titleTask, wrapItem) {
-
   //создание input
   const editInput = document.createElement("input");
   editInput.setAttribute("type", "text");
@@ -13,7 +12,7 @@ export function TaskEdit(titleTask, wrapItem) {
 
   // и кнопки для ввода отредактированного текста
   wrapItem.append(
-    Button("edit", () => {
+    Button("Edit", () => {
       let valueInput = editInput.value;
       editTask(titleTask, valueInput);
     })

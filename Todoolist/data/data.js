@@ -55,7 +55,7 @@ export function addElement(textInput) {
     titleTask: textInput.value,
   };
   if (textInput.value === "") {
-    alert("Введи задачу или жмякни CANCEL для отмены");
+    alert("Введи задачу, самурай, или жмякни CANCEL для отмены");
   } else {
     // запушить его в массив данных
     data.tasks.push(taskElement);
@@ -76,7 +76,6 @@ export function editTask(oldText, newText) {
   notifySubscribe();
 }
 
-
 /*  */
 // открытие диалогового окна по нажатию кнопки +добавить
 export function closeDialog() {
@@ -88,3 +87,6 @@ export function openDialog() {
   data.dialogWindow = true;
   notifySubscribe();
 }
+
+
+

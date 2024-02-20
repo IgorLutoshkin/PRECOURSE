@@ -25,6 +25,10 @@ export function Dialog() {
     Button("Cancel", () => closeDialog())
   );
 
+document.addEventListener('click', ()=> {
+
+})
+
   document.body.append(container);
 
   return container;
