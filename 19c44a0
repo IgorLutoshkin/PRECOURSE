@@ -1,0 +1,30 @@
+[33m52e71a6[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: commit: add title
+[33m9b4b555[m HEAD@{1}: commit: add color in style
+[33m19c44a0[m HEAD@{2}: checkout: moving from main to main
+[33m19c44a0[m HEAD@{3}: checkout: moving from todolist to main
+[33m35c4155[m[33m ([m[1;31morigin/todoolist[m[33m, [m[1;31morigin/todolist[m[33m)[m HEAD@{4}: Branch: renamed refs/heads/todoolist to refs/heads/todolist
+[33m35c4155[m[33m ([m[1;31morigin/todoolist[m[33m, [m[1;31morigin/todolist[m[33m)[m HEAD@{6}: commit: add title
+[33mecf22b7[m HEAD@{7}: commit: del hard-code task
+[33m19c44a0[m HEAD@{8}: checkout: moving from todoolist to todoolist
+[33m19c44a0[m HEAD@{9}: checkout: moving from todoolist to todoolist
+[33m19c44a0[m HEAD@{10}: checkout: moving from main to todoolist
+[33m19c44a0[m HEAD@{11}: checkout: moving from todoolist to main
+[33m19c44a0[m HEAD@{12}: checkout: moving from todoolist to todoolist
+[33m19c44a0[m HEAD@{13}: checkout: moving from main to todoolist
+[33m19c44a0[m HEAD@{14}: checkout: moving from todoolist to main
+[33m19c44a0[m HEAD@{15}: checkout: moving from todoolist to todoolist
+[33m19c44a0[m HEAD@{16}: Branch: renamed refs/heads/gh-pages to refs/heads/todoolist
+[33m19c44a0[m HEAD@{18}: checkout: moving from main to gh-pages
+[33m19c44a0[m HEAD@{19}: commit: add moving the offer in grid & setinterval
+[33m7f19e27[m HEAD@{20}: commit: add created a table in js + css
+[33m0a4c2d1[m HEAD@{21}: commit: add file structure
+[33m661cfa9[m HEAD@{22}: commit: add style css
+[33m85b341a[m HEAD@{23}: commit: add lesson 4-3
+[33m8ad9293[m HEAD@{24}: commit: add lesson 4-2
+[33m4fa1f28[m HEAD@{25}: commit: add lesson 4-1
+[33m56abbd6[m HEAD@{26}: commit: fixed the addresses URL
+[33m8239332[m HEAD@{27}: commit: 'add chernovik'
+[33mb1e96c1[m HEAD@{28}: commit: 'add index & img file
+[33mcf99555[m HEAD@{29}: commit: 'add audio file'
+[33m9a7013c[m HEAD@{30}: commit: 'add function lesson2'
+[33mdc84ff3[m HEAD@{31}: clone: from https://github.com/IgorLutoshkin/PRECOURSE.git
