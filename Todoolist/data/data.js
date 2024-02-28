@@ -2,7 +2,11 @@ export const data = {
   id: crypto.randomUUID(),
   title: "Todolist",
   tasks: [
+<<<<<<< HEAD
     /*  {
+=======
+ /*    {
+>>>>>>> ecf22b7 (del hard-code task)
       id: crypto.randomUUID(),
       titleTask: "Learn HTML",
     },

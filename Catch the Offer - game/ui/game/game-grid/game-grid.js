@@ -1,5 +1,5 @@
 import { data } from "../../../data.js";
-import { offer } from "./offer/offer.js";
+import { Cell } from "./cell/Cell.js";
 
 export function gameGrid() {
   const tableElement = document.createElement("table");
@@ -9,12 +9,8 @@ export function gameGrid() {
     const rowElement = document.createElement("tr");
 
     for (let x = 0; x < data.columnCount; x++) {
-      const columnElement = document.createElement("td");
-      // columnElement.append(`x:${x} y:${y}`);
-      if (x === data.x && y === data.y) {
-        columnElement.append(offer()); // добавали отрисовку оффера
-      }
-      tableElement.append(columnElement);
+      const cellElement = Cell(x, y);
+      rowElement.append(cellElement);
     }
 
     tableElement.append(rowElement);
