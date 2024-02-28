@@ -2,7 +2,7 @@ export const data = {
   id: crypto.randomUUID(),
   title: "Todolist",
   tasks: [
-    {
+    /*  {
       id: crypto.randomUUID(),
       titleTask: "Learn HTML",
     },
@@ -17,7 +17,7 @@ export const data = {
     {
       id: crypto.randomUUID(),
       titleTask: "Learn React",
-    },
+    }, */
   ],
   dialogWindow: false,
 };
@@ -87,6 +87,3 @@ export function openDialog() {
   data.dialogWindow = true;
   notifySubscribe();
 }
-
-
-

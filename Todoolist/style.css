@@ -29,6 +29,7 @@ body {
   position: relative;
   min-width: 300px;
   max-width: 568px;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
