@@ -7,7 +7,7 @@ body {
   font-weight: 400;
   font-style: normal;
 
-  background: linear-gradient(to right, #fce7cb, #ffb866);
+  background: linear-gradient(to right, #ffe3be, #ffb866);
   background-size: 200% 100%;
   animation: gradientTransition 10s ease infinite;
 }
