@@ -1,4 +1,6 @@
-import { playerList } from "./data.js";
+import { data } from "./data.js";
 import { renderPlaylists } from "./renderPlayLists.js";
 
-renderPlaylists(playerList);
+renderPlaylists(data);
+
+

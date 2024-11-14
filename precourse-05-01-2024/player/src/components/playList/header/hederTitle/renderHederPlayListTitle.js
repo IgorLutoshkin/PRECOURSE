@@ -1,5 +1,8 @@
-export function renderPlaylistHeader(titlePlayList) {
-  const playListTitleEl = document.createElement("h1");
-  playListTitleEl.append(titlePlayList);
-  document.body.append(playListTitleEl);
+export function renderPlaylistHeader(title) {
+  const playListTitleEl = document.createElement("h2");
+  playListTitleEl.append(title);
+  // console.log('title');
+  
+  // document.body.append(playListTitleEl);
+  return playListTitleEl
 }

@@ -1,19 +1,21 @@
+export const OFFER_STATUS = {
+  offer: "offer",
+  cath: "cath",
+  miss: "miss",
+};
+
 export const data = {
   cathPoints: 0,
   missPoints: 0,
   x: 0,
   y: 0,
-  rowCount: 3,
-  columnCount: 3,
+  missedOffer: null,
+  cathOffer: null,
+  rowCount: 3, //
+  columnCount: 3, //
   winPoints: 5,
   win: false,
-  status: "offer",
-};
-
-export const OFFER_STATUS = {
-  offer: "offer",
-  cath: "cath",
-  miss: "miss",
+  status: OFFER_STATUS.offer,
 };
 
 /* здесь пишем логику */
@@ -34,6 +36,7 @@ function changeOfferCoordinates() {
     newY = randomNumber(data.rowCount);
     newCoordinates = newX === data.x && newY === data.y;
   } while (newCoordinates);
+
   data.x = newX;
   data.y = newY;
 }
@@ -62,6 +65,11 @@ export function cathPoints() {
     clearInterval(setIntervalId);
     data.win = true;
   } else {
+    setCaughtOffer(data.x, data.y);
+  setTimeout(() => {
+    clearCaughtOffer();
+    subscriber();
+  }, 200);
     changeOfferCoordinates();
     runJumpSetinterval();
   }
@@ -72,7 +80,11 @@ export function cathPoints() {
 //увеличиваем счетчик непойманных офферов за счет того что каждую секунду тикает счетчик
 function missPoints() {
   data.missPoints++;
-  
+  setMissedOffer(data.x, data.y);
+  setTimeout(() => {
+    clearMissedOffer();
+    subscriber();
+  }, 200);
   changeOfferCoordinates();
   subscriber(); //после того как данные поменялись, вызываем функцию (let subscriber)
 }
@@ -93,4 +105,19 @@ export function catchOffer() {
     OFFER_STATUS.cath = data.status;
     subscriber();
   }, 200);
+}
+////////////////////////////////////////////
+
+function setMissedOffer(x, y) {
+  data.missedOffer = { x, y };
+}
+function clearMissedOffer(x, y) {
+  data.missedOffer = null;
+}
+
+function setCaughtOffer(x, y) {
+  data.cathOffer = { x, y };
+}
+function clearCaughtOffer(x, y) {
+  data.cathOffer = null;
 }
