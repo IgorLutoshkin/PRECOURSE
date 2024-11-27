@@ -10,6 +10,10 @@ import {
   Down2,
   Left2,
   Right2,
+  EVENTS,
+  start,
+  setSystemGameMode,
+  GAME_SYSTEM_MODE,
 } from "./data.js";
 import { Game } from "./ui/game/game.components.js";
 import { Win } from "./ui/game/win/win.js";
@@ -17,18 +21,27 @@ import { Win } from "./ui/game/win/win.js";
 const appElement = document.getElementById("root");
 
 function renderApp() {
-  appElement.innerHTML = "";
+  subscribe(EVENTS.GAME_STATUS_CHANGED, () => {
+    render();
+  });
 
-  if (getGameStatus() === OFFER_STATUS.win) {
-    appElement.append(Win());
-  } else {
-    const game = Game();
-    appElement.append(game);
+  function render() {
+    appElement.innerHTML = "";
+    if (getGameStatus() === OFFER_STATUS.win) {
+      const win = Win();
+      appElement.append(Win());
+    } else {
+      const game = Game();
+      appElement.append(game);
+    }
   }
+  setSystemGameMode(GAME_SYSTEM_MODE.ONLY_CLIENT)
+  start();
+  render();
 }
 
 renderApp();
-subscribe(renderApp); // callback
+//subscribe(renderApp); // callback
 
 window.addEventListener("keyup", (event) => {
   switch (event.code) {

@@ -1,5 +1,5 @@
 import { getSettings } from "../../../data.js";
-import { Cell } from "./cell/Cell.js";
+import { Cell } from "./cell/cell.js";
 
 export function gameGrid() {
   const tableElement = document.createElement("table");
